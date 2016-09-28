@@ -24,19 +24,28 @@
 
 6. Give an example of a relation.  Determine a natural key for this relation.
 
+  An example of a relation would be R=(adv ID, AD first, AD last, office, phone, ad department) The natural key for this relation would be the advisors ID, because it has a logical relationship with to the other attributes in the record. 
+
   For question 7 - 8, Consider product *orders*.  In particular, associated with an order is: customer name (first and last), address (street, city, state, zip), phone, email, the products orders (including item, quantity, and price).  
 
 7. Create a relational data model for *orders*.  Consider applying normalization rules (discuss Monday)
 
-  *orders- entities of orders which are tables. Players in orders, so customers is an entity of orders, customers make orders. Customers are a table. name, first, last, street, city, state, zip. zip determines city and state so take out. primary key- order id (surrogate as well) 
+  R= (order_id, customer_id, invoice_number, status)
+  I would apply the first normalization rule and divide the date into indivisible units. The primary key in this relation is the order_number. I would create a customer entity. Customers= (order_id, c_first, c_last, zip, state) 
 
 8. For customer, could email be used as a primary key?  If so, state why.  Also, if possible to use as a primary key, discuss any disadvantages of using email as a primary key.
 
+  I do not think email is a good canditate for a primary key. This is because, a primary key needs to be hold a unique value. It may be possible that two people have similar email addresses. 
+
 9. Given two relations S and R below find the Cartsian Product S x R.
 
-  cross product? Every element of S has to be matched of each element of R. 1,2,3,1,1 1,2,2,2,3,
+  Every element of S has to be matched of each element of R. (1,2,3,1,1 1,2,2,2,3,1,2,1,2,5,2,3,3,1,1,2,3,2,2,3,2,3,2,1,5)
+  
 10. Find the natural join between the Faculty and Department relations below.
 
+  The natural join is department, because this column has a relationship with the rest of the data. 
+
+ 
 S
 --------------
 | A | B |
