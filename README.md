@@ -33,11 +33,9 @@
   R= (order_id, customer_id, invoice_number, status)
   I would apply the first normalization rule and divide the date into indivisible units. The primary key in this relation is the order_number. I would create a customer entity. Customers= (order_id, c_first, c_last, zip, state) 
  
-  
- 
 8. For customer, could email be used as a primary key?  If so, state why.  Also, if possible to use as a primary key, discuss any disadvantages of using email as a primary key.
 
-  I do not think email is a good canditate for a primary key. This is because, a primary key needs to be hold a unique value. It may be possible that two people have similar email addresses. 
+  I do not think email is a good canditate for a primary key. This is because, a primary key needs to be hold a unique value. It may be possible that two people have similar email addresses. Also, customers might make a change to their email address. In this case you would have to change all foreign keys. 
 
 9. Given two relations S and R below find the Cartsian Product S x R.
 
