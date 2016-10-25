@@ -6,25 +6,59 @@
 
   A relation is a table that may consist of numerous attributes, which are columns or fields. A relation may also have (multiple) tuple(s) which is a row or a record. 
   
+  
+  
+__C__
+
+
+  
 2. What are keys in a relation?
 
-  There are multiple key types in a relation, and keys function in multiple ways. Foreign keys identify records in a relation by      matching a primary key in a different table. A primary key is a determinate that holds a unique value which identifies each record in the relation. There are also candidate keys, natural, surrogate, and composite keys.  
+  There are multiple key types in a relation, and keys function in multiple ways. Foreign keys identify records in a relation by      matching a primary key in a different table. A primary key is a determinate that holds a unique value which identifies each record in the relation. There are also candidate keys, natural, surrogate, and composite keys. 
+  
+  
+__C__
+
+
+
   
 3. What is a surrogate key and how is it used?
 
   A surrogate key is independent of the item/data. Meaning that they are not derived from application data, they are just values that are generated and then stored with the rest of the columns in a record. 
+  
+  
+__C__
+
+
 
 4. In the following equation, Area = Length x Width, identify the determinant(s).
 
-  The determinant(s) are length and width, because both of these determine the area. The area is dependent on the length and width values. 
+  The determinant(s) are length and width, because both of these determine the area. The area is dependent on the length and width values.
+  
+  
+__C__
+
+
 
 5. If a relation has no duplicate data, how can you be sure there is always at least one primary key?
 
   You can create a foreign key that links two tables (key columns and related columns of another table). In other words, the foreign key identifies records in a table by matching a primary key in a different table. 
+  
+  
+__C__
+
+
+
 
 6. Give an example of a relation.  Determine a natural key for this relation.
 
   An example of a relation would be R=(adv ID, AD first, AD last, office, phone, ad department) The natural key for this relation would be the advisors ID, because it has a logical relationship with to the other attributes in the record. 
+  
+  
+  
+__C__
+
+
 
   For question 7 - 8, Consider product *orders*.  In particular, associated with an order is: customer name (first and last), address (street, city, state, zip), phone, email, the products orders (including item, quantity, and price).  
 
@@ -32,18 +66,37 @@
 
   R= (order_id, customer_id, invoice_number, status)
   I would apply the first normalization rule and divide the date into indivisible units. The primary key in this relation is the order_number. I would create a customer entity. Customers= (order_id, c_first, c_last, zip, state) 
+  
+  
+__X.  Customer table would not have order_id in it.  Orders table would have customer ID although__
+
+
  
 8. For customer, could email be used as a primary key?  If so, state why.  Also, if possible to use as a primary key, discuss any disadvantages of using email as a primary key.
 
-  I do not think email is a good canditate for a primary key. This is because, a primary key needs to be hold a unique value. It may be possible that two people have similar email addresses. Also, customers might make a change to their email address. In this case you would have to change all foreign keys. 
+  I do not think email is a good canditate for a primary key. This is because, a primary key needs to be hold a unique value. It may be possible that two people have similar email addresses. Also, customers might make a change to their email address. In this case you would have to change all foreign keys.
+  
+  
+__X.  Yes, two may have similar (but different) email addresses.  If the key was 1, 2, 3, 4, is 2 similar to 3?  Is 1 similar to 11?  Keys are not used by humans, but by the RDMS. __
+
+
+
 
 9. Given two relations S and R below find the Cartsian Product S x R.
 
   Every element of S has to be matched of each element of R. (1,2,3,1,1 1,2,2,2,3,1,2,1,2,5,2,3,3,1,1,2,3,2,2,3,2,3,2,1,5)
   
+  
+__X__
+
+
+  
 10. Find the natural join between the Faculty and Department relations below.
 
   The natural join is department, because this column has a relationship with the rest of the data. 
+
+__C__
+
 
  
 S
